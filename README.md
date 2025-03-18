@@ -10,6 +10,21 @@ This project implements a **Retrieval-Augmented Generation (RAG)** system using 
 - **Efficient CPU-based inference**
 - **Logging** of user interactions
 
+A) Architecture Overview
+The architecture consists of the following components:
+Web Scraping Module: Extracts textual data from websites using Selenium and BeautifulSoup. 
+Chunking Module: Splits extracted text into chunks using RecursiveCharacterTextSplitter. 
+Embedding Generation Module: Uses SentenceTransformers to generate embeddings for text chunks. 
+Vector Database: Stores embeddings using Pinecone for retrieval. 
+Query Processing Module: 
+Embeds user queries. 
+Matches query embeddings with stored embeddings in Pinecone. 
+Generates context for the LLM. 
+LLM-based Answer Generation: Uses a transformer model to generate responses based on retrieved context. 
+
+Architecture Diagram: [View]([url](https://drive.google.com/file/d/1i2ys8ded71PczxBpEhnyKOSxVVUKE2E8/view?usp=sharing))
+    
+
 ## Installation
 
 ### Prerequisites
