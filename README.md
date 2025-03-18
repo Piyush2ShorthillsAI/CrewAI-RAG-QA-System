@@ -24,7 +24,7 @@ The architecture consists of the following components:
     - Generates context for the LLM.
 - **LLM-based Answer Generation:** Uses a transformer model to generate responses based on retrieved context.
 
-### [Architecture Diagram](https://drive.google.com/file/d/1i2ys8ded71PczxBpEhnyKOSxVVUKE2E8/view?usp=sharing)
+### [View Architecture Diagram](https://drive.google.com/file/d/1i2ys8ded71PczxBpEhnyKOSxVVUKE2E8/view?usp=sharing)
 
 ## Installation
 
