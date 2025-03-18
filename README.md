@@ -11,6 +11,7 @@ This project implements a **Retrieval-Augmented Generation (RAG)** system using 
 - **Logging** of user interactions
 
 A) Architecture Overview
+
 The architecture consists of the following components:
 Web Scraping Module: Extracts textual data from websites using Selenium and BeautifulSoup. 
 Chunking Module: Splits extracted text into chunks using RecursiveCharacterTextSplitter. 
