@@ -9,7 +9,7 @@ import json
 # Load the pre-trained similarity model
 similarity_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
-def is_similar(new_answer, expected_answer, threshold=0.4):
+def is_similar(new_answer, expected_answer, threshold=0.5):
     """
     Check if new_answer is semantically or textually similar to the expected_answer
     using FuzzyWuzzy for fuzzy matching and SentenceTransformers for meaning-based similarity.
