@@ -10,21 +10,21 @@ This project implements a **Retrieval-Augmented Generation (RAG)** system using 
 - **Efficient CPU-based inference**
 - **Logging** of user interactions
 
-A) Architecture Overview
+## Architecture Overview
 
 The architecture consists of the following components:
-Web Scraping Module: Extracts textual data from websites using Selenium and BeautifulSoup. 
-Chunking Module: Splits extracted text into chunks using RecursiveCharacterTextSplitter. 
-Embedding Generation Module: Uses SentenceTransformers to generate embeddings for text chunks. 
-Vector Database: Stores embeddings using Pinecone for retrieval. 
-Query Processing Module: 
-Embeds user queries. 
-Matches query embeddings with stored embeddings in Pinecone. 
-Generates context for the LLM. 
-LLM-based Answer Generation: Uses a transformer model to generate responses based on retrieved context. 
 
-Architecture Diagram: https://drive.google.com/file/d/1i2ys8ded71PczxBpEhnyKOSxVVUKE2E8/view?usp=sharing
-    
+- **Web Scraping Module:** Extracts textual data from websites using Selenium and BeautifulSoup.
+- **Chunking Module:** Splits extracted text into chunks using RecursiveCharacterTextSplitter.
+- **Embedding Generation Module:** Uses SentenceTransformers to generate embeddings for text chunks.
+- **Vector Database:** Stores embeddings using Pinecone for retrieval.
+- **Query Processing Module:**
+    - Embeds user queries.
+    - Matches query embeddings with stored embeddings in Pinecone.
+    - Generates context for the LLM.
+- **LLM-based Answer Generation:** Uses a transformer model to generate responses based on retrieved context.
+
+### [Architecture Diagram](https://drive.google.com/file/d/1i2ys8ded71PczxBpEhnyKOSxVVUKE2E8/view?usp=sharing)
 
 ## Installation
 
@@ -97,44 +97,6 @@ text_splitter = RecursiveCharacterTextSplitter(
 - **chunk\_size**: Set to 256, ensuring the chunks are small enough to fit into the model's context window while maintaining relevant information.
 - **chunk\_overlap**: Set to 50, providing sufficient overlap to prevent loss of context across adjacent chunks.
 
-```python
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-
-# Define text splitter
-chunk_size = 256  # Optimal size to ensure relevant context is captured without exceeding token limits
-chunk_overlap = 50  # Ensures overlapping content to maintain context between chunks
-
-text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=chunk_size,
-    chunk_overlap=chunk_overlap
-)
-```
-
-- **chunk\_size**: Set to 256, ensuring the chunks are small enough to fit into the model's context window while maintaining relevant information.
-- **chunk\_overlap**: Set to 50, providing sufficient overlap to prevent loss of context across adjacent chunks.
-
-```python
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-
-# Define text splitter
-chunk_size = 500  # Defines the size of each chunk
-chunk_overlap = 50  # Ensures some overlap between chunks to maintain context
-
-text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=chunk_size,
-    chunk_overlap=chunk_overlap
-```
-
-- **chunk\_size**: Specifies the maximum size of each chunk, ensuring that the model processes manageable segments.
-- **chunk\_overlap**: Adds overlapping content between chunks to preserve context across splits.
-
-```python
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-
-# Define text splitter
-thange 
-```
-
 The system requires scraping first, then querying the processed data via Streamlit.
 
 ```bash
@@ -145,52 +107,7 @@ python main_final.py
 streamlit run streamlit.py
 ```
 
-The system uses **Mistral-7B** as the RAG model. The model name used is:
-
-```
-model_name = "mistralai/Mistral-7B-v0.1"
-```
-
-The embedding model used is **all-MiniLM-L6-v2** from Sentence Transformers. It is loaded as:
-
-```python
-from sentence_transformers import SentenceTransformer
-
-# Load Sentence Transformer model
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-```
-
-The system requires scraping first, then querying the processed data via Streamlit.
-
-```bash
-# Step 1: Scrape the website and generate `output.json`
-python main_final.py
-
-# Step 3: Launch the Streamlit UI
-streamlit run streamlit.py
-```
-
-The system uses **Mistral-7B** as the RAG model. The model name used is:
-
-```
-model_name = "mistralai/Mistral-7B-v0.1"
-```
-
-The system requires scraping first, then querying the processed data via Streamlit.
-
-```bash
-# Step 1: Scrape the website and generate `output.json`
-python main_final.py
-
-# Step 3: Launch the Streamlit UI
-streamlit run streamlit.py
-```
-
-The system requires scraping first, then querying the processed data via Streamlit.
-
-```bash
-File Structure
-```
+## File Structure
 
 ```
 websitescraper/
@@ -226,26 +143,26 @@ streamlit run streamlit.py
 ```
 
 This launches the UI where users can enter queries and receive responses.
-3\. Enter a question in the text input field.
-4\. The system retrieves relevant information and generates an answer.
-5\. Previous queries are displayed in a table.
 
-3\. Enter a question in the text input field.
+3. Enter a question in the text input field.
+4. The system retrieves relevant information and generates an answer.
+5. Previous queries are displayed in a table.
 
-4\. The system retrieves relevant information and generates an answer.
+## Logging
 
-5\. Previous queries are displayed in a table.Logging .User queries and responses are saved in `logs.csv`. You can view them directly in the UI.
-
-Evaluation Results: 60% Accuracy | Passed: 30 | Failed: 20
+User queries and responses are saved in `logs.csv`. You can view them directly in the UI.
 
 ## Optimizations for CPU
 
 - **Disabled gradients for inference**
-- **Used ****************************************************`torch.set_num_threads()`**************************************************** for better CPU performance**
-- **Reduced ****************************************************`max_new_tokens`**************************************************** to speed up response generation**
+- **Used ********`torch.set_num_threads()`******** for better CPU performance**
+- **Reduced ********`max_new_tokens`******** to speed up response generation**
+
+📊 Evaluation Results: 60% Accuracy | Passed: 30 | Failed: 20
 
 ## Contributing
 
 Feel free to open an issue or submit a pull request for improvements!
+
 
 
