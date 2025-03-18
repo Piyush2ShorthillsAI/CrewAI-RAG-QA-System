@@ -236,6 +236,8 @@ This launches the UI where users can enter queries and receive responses.
 
 5\. Previous queries are displayed in a table.Logging .User queries and responses are saved in `logs.csv`. You can view them directly in the UI.
 
+Evaluation Results: 60% Accuracy | Passed: 30 | Failed: 20
+
 ## Optimizations for CPU
 
 - **Disabled gradients for inference**
@@ -245,4 +247,5 @@ This launches the UI where users can enter queries and receive responses.
 ## Contributing
 
 Feel free to open an issue or submit a pull request for improvements!
+
 
