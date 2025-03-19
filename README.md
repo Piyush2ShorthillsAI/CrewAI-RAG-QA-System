@@ -41,7 +41,7 @@ pip install torch transformers pinecone-client streamlit pandas
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/crewai-qa-system.git
+git clone https://github.com/Piyush2ShorthillsAI/CrewAI-RAG-QA-System.git
 cd crewai-qa-system
 ```
 
