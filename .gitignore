@@ -9,7 +9,6 @@ __pycache__/
 *.pyd
 
 # Ignore logs and output files
-*.log
 *.csv
 *.json
 output.json
