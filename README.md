@@ -64,10 +64,10 @@ PINECONE_API_KEY = ""
 
 ### 3. Run the Application
 
-The system uses **Mistral-7B** as the RAG model. The model name used is:
+The system uses **llama3 ** as the RAG model. The model name used is:
 
 ```
-model_name = "mistralai/Mistral-7B-v0.1"
+model_name = "llama3"
 ```
 
 The embedding model used is **all-MiniLM-L6-v2** from Sentence Transformers. It is loaded as:
