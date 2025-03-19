@@ -158,7 +158,8 @@ User queries and responses are saved in `logs.csv`. You can view them directly i
 - **Used ********`torch.set_num_threads()`******** for better CPU performance**
 - **Reduced ********`max_new_tokens`******** to speed up response generation**
 
-📊 Evaluation Results: 81.81818181818183% Accuracy | Passed: 108 | Failed: 24  
+📊 Evaluation Results: 80.92105263157895% Accuracy | Passed: 123 | Failed: 29  
+
 
 ## Contributing
 
