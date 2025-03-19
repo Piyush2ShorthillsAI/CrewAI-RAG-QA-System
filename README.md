@@ -1,12 +1,12 @@
 # CrewAI Q&A System (RAG-based)
 
-This project implements a **Retrieval-Augmented Generation (RAG)** system using **Mistral-7B** for answering user queries based on retrieved context. The system fetches relevant text chunks from **Pinecone**, processes them with an **LLM (Mistral-7B)**, and provides structured answers. The interface is built using **Streamlit** for easy interaction.
+This project implements a **Retrieval-Augmented Generation (RAG)** system using **llama3** for answering user queries based on retrieved context. The system fetches relevant text chunks from **Pinecone**, processes them with an **LLM (llama3)**, and provides structured answers. The interface is built using **Streamlit** for easy interaction.
 
 ## Features
 
 - **Web-based Q&A system** using Streamlit
 - **Retrieval-Augmented Generation (RAG)** using Pinecone
-- **Mistral-7B LLM** for text generation
+- **llamma** for text generation
 - **Efficient CPU-based inference**
 - **Logging** of user interactions
 
