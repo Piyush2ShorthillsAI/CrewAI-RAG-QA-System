@@ -157,13 +157,7 @@ This launches the UI where users can enter queries and receive responses.
 
 ## Logging
 
-User queries and responses are saved in `logs.csv`. You can view them directly in the UI.
-
-## Optimizations for CPU
-
-- **Disabled gradients for inference**
-- **Used ********`torch.set_num_threads()`******** for better CPU performance**
-- **Reduced ********`max_new_tokens`******** to speed up response generation**
+User queries and responses are saved in `logger/logs.csv`. You can view them directly in the UI.
 
 📊 Evaluation Results: 76.16707616707616% Accuracy | Passed: 310 | Failed: 97 
 
