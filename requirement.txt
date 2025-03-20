@@ -1,0 +1,11 @@
+langchain
+scrapy
+numpy
+requests
+pandas
+python-dotenv
+pinecone-client
+sentence-transformers
+fuzzywuzzy
+python-Levenshtein
+streamlit
