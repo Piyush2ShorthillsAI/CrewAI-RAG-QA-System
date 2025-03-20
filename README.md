@@ -101,10 +101,10 @@ The system requires scraping first, then querying the processed data via Streaml
 
 ```bash
 # Step 1: Scrape the website and generate `output.json`
-python main_final.py
+python3 src/main_final.py
 
 # Step 3: Launch the Streamlit UI
-streamlit run app.py
+streamlit run src/app.py
 ```
 
 ## File Structure
@@ -139,7 +139,7 @@ streamlit run app.py
 ├── .env                          # Environment variables
 ├── .gitignore                    # Git ignore settings
 └── README.md                     # Project documentation
-
+|_  requirement.txt               # dependencies
 
 ## Usage
 
