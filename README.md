@@ -48,7 +48,7 @@ cd crewai-qa-system
 ### 2. Set Up Pinecone
 
 - Create a **Pinecone** account and get your API key.
-- Configure your index in `query_to_pinecone_final.py`.
+- Configure your index in `src/pinecone_ops/pinecone_setup.py`.
 
 ### 2.1 Set Up .env File
 
@@ -58,9 +58,6 @@ cd crewai-qa-system
 ```
 PINECONE_API_KEY = ""
 ```
-
-- Create a **Pinecone** account and get your API key.
-- Configure your index in `query_to_pinecone_final.py`.
 
 ### 3. Run the Application
 
