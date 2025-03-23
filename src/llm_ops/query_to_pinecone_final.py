@@ -60,4 +60,3 @@ class PineconeQueryHandler:
         # 🔍 Step 5: Combine content from matching documents
         combined_content = "\n".join([doc["content"] for doc in matching_data])
         return combined_content
-

@@ -3,7 +3,7 @@ import json
 from pinecone_ops.config import Config
 
 class LLMHandler:
-    def __init__(self,):
+    def __init__(self):
         self.access = Config()
         self.api_url = self.access.OLLAMA_API_URL
     
