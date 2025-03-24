@@ -135,8 +135,47 @@ class BertProcessor:
 if __name__ == "__main__":
     # Paths and API configurations
     INPUT_FILE = "data/q&a_rag_application.xlsx"
-    OUTPUT_FILE = "test_results/bert_base_scores1.xlsx"
+    OUTPUT_FILE = "src/test_results/bert_base_scores1.xlsx"
 
     # Initialize and run the BertProcessor
     processor = BertProcessor(INPUT_FILE, OUTPUT_FILE)
     processor.process_excel()
+
+# Precision (P): Proportion of relevant information in the predicted answer.
+
+# Recall (R): Proportion of ground truth information captured in the predicted answer.
+
+# F1-Score (F1): Harmonic mean of Precision and Recall.
+
+# Faithfulness Score:
+
+#     LLM answer compared to the retrieved context.
+
+# Answer Correctness Score:
+
+#     LLM answer compared to the ground truth.
+
+# Answer Relevancy Score:
+
+#     LLM answer compared to the original query.
+
+# Context Precision Score:
+
+#     Context compared to the query to check relevance.
+
+# Context Recall Score:
+
+#     Checks if the context contains enough information for the query.
+
+# Use BERTScore with bert-base-uncased to evaluate:
+
+#     Faithfulness: Measures how well the LLM answer aligns with the retrieved context.
+
+#     Answer Correctness: Measures similarity between the LLM answer and the ground truth.
+
+#     Answer Relevancy: Checks if the answer addresses the query correctly.
+
+#      Context Precision: Evaluates how much of the context is relevant to the query.
+
+# #     Context Recall: Measures whether the context contains all necessary information.
+
