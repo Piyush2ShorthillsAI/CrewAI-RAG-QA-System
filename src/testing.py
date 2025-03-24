@@ -6,6 +6,7 @@ from llm_ops.llm2 import LLMHandler
 from llm_ops.query_to_pinecone_final import PineconeQueryHandler
 
 
+
 class BertProcessor:
     def __init__(self, input_file, output_file):
         self.input_file = input_file
@@ -71,9 +72,9 @@ class BertProcessor:
         llm_answer = self.llm_handler.query_llm(retrieved_context, query)
 
         # Debug info for verification
-        print(f"🔍 Processing Row {index + 1}: Query: {query}")
-        print(f"📚 Retrieved Context: {retrieved_context}")
-        print(f"🤖 LLM Answer: {llm_answer}")
+        print(f"Processing Row {index + 1}: Query: {query}")
+        print(f"Retrieved Context: {retrieved_context}")
+        print(f"LLM Answer: {llm_answer}")
 
         # BERT-based metric evaluations
         faithfulness_score = self.calculate_bertscore(retrieved_context, llm_answer)  # Faithfulness
