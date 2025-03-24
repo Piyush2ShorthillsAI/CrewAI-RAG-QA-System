@@ -24,13 +24,13 @@ class BertProcessor:
     def load_input_data(self):
         """Load input data from the original Excel file."""
         self.df = pd.read_excel(self.input_file, engine="openpyxl")
-        print(f"✅ Loaded input data from: {self.input_file}")
+        print(f"Loaded input data from: {self.input_file}")
 
     def load_previous_data(self):
         """Load previous results to preserve processed rows."""
         if os.path.exists(self.output_file):
             self.prev_df = pd.read_excel(self.output_file)
-            print(f"✅ Previous results loaded from: {self.output_file}")
+            print(f"Previous results loaded from: {self.output_file}")
         else:
             self.prev_df = pd.DataFrame()
 
@@ -97,12 +97,12 @@ class BertProcessor:
         self.df.at[index, "Context_Precision_Score"] = context_precision_score
         self.df.at[index, "Context_Recall_Score"] = context_recall_score
         self.df.at[index, "BERT_Final_Score"] = final_score
-        print(f"✅ Row {index + 1}/{len(self.df)} processed successfully. Final Score: {final_score}")
+        print(f"Row {index + 1}/{len(self.df)} processed successfully. Final Score: {final_score}")
 
     def save_progress(self):
         """Save progress to the output file to preserve results."""
         self.df.to_excel(self.output_file, index=False)
-        print(f"💾 Progress saved at: {self.output_file}")
+        print(f" Progress saved at: {self.output_file}")
 
     def process_excel(self):
         """Main function to process the entire Excel and calculate scores."""
@@ -120,15 +120,15 @@ class BertProcessor:
                     # Save progress after each row to prevent data loss
                     self.save_progress()
                 else:
-                    print(f"⏩ Skipping row {index + 1}/{len(self.df)}: Already scored.")
+                    print(f"Skipping row {index + 1}/{len(self.df)}: Already scored.")
             except Exception as e:
-                print(f"⚠️ Error processing row {index + 1}: {str(e)}")
+                print(f" Error processing row {index + 1}: {str(e)}")
                 self.save_progress()
                 break
 
         # Final save after completion
         self.save_progress()
-        print(f"✅ All rows processed. Final file saved at: {self.output_file}")
+        print(f" All rows processed. Final file saved at: {self.output_file}")
 
 
 # Configuration and setup
