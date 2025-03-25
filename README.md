@@ -162,11 +162,11 @@ This launches the UI where users can enter queries and receive responses.
 
 User queries and responses are saved in `logger/logs.csv`. You can view them directly in the UI.
 
-## Evaluation Results
-  1 Final Evaluation Summary
- 2 Total Score: 0.5694449
-   3 Average Final Query-Wise Score: 0.52
-  4  Average Answer Correctness Score (Considered Final in Some Cases): 0.62
+Evaluation Results
+Final Evaluation Summary
+Total Score: 0.5694449
+Average Final Query-Wise Score: 0.52
+Average Answer Correctness Score (Considered Final in Some Cases): 0.62
 
 ## Contributing
 
