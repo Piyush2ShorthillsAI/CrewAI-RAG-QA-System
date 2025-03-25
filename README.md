@@ -107,36 +107,39 @@ streamlit run src/app.py
 ## File Structure
 
 ```
- CrewAI-RAG-QA-System/
+CrewAI-RAG-QA-System/
 ├── venv/                      # Virtual environment
 ├── src/                       # Source code
 │   ├── data_processing/        # Web scraping, chunking, and embeddings
 │   │   ├── chunking.py           # Text chunking logic
 │   │   ├── embedding.py          # Generate embeddings
-│   │   └── scrape_website.py     # Web scraping logic
+│   │   ├── scrape_website.py     # Web scraping logic
 │   ├── pinecone_ops/           # Pinecone setup and upload
 │   │   ├── pinecone_setup.py     # Pinecone setup
 │   │   ├── config.py             # Configuration settings
-│   │   └── upload.py             # Upload to Pinecone/Storage
+│   │   ├── upload.py             # Upload to Pinecone/Storage
 │   ├── tests/                  # Test-related files
-│   │   ├── test_cases.py         # Test cases
-│   │   ├── testing.py            # Test runner
-│   │   ├── generated_test_cases.json  # Auto-generated test cases
-│   │   └── test_results.log      # Test results
+│   │   ├── test_rag.py         # pytest of code base
 │   ├── logger/                 # Logging functionality
-│   │   ├── log.py                # Logging utilities
-│   │   └── logs.csv              # Log storage
+│   │   ├──log.py                # Logging utilities
+│   │   ├──logs.csv              # Log storage
 │   ├── llm_ops/                # LLM and Pinecone queries
-│   │   ├── llm2.py               # LLM pipeline logic
-│   │   └── query_to_pinecone.py  # Querying Pinecone
+│   │   ├──llm2.py               # LLM pipeline logic
+│   │   ├──query_to_pinecone.py   # Querying Pinecone
 │   ├── app.py                    # Main application entry point
-│   └── main_final.py             # Main execution file
-├── data/                      # Data storage
-│   └── output.json               # Processed output data
-├── .env                          # Environment variables
+│   ├──main_final.py             # Main execution file
+|   ├──testing.py                        #testing test cases in input file q&a_rag_application.xlsx   
+|   ├──test_results/                     #contains output .xlxs file of rag evaluation model 
+|   |   ├──bert_base_scores_.xlsx        #contains results of test cases query wise, and final score of test cases 
+├── data/                              # Data storage
+│    ├──output.json                     # Processed output data
+|    ├──q&a_rag_application.xlsx        #input .xlxs file contains test cases 
+|    ├──chunks.json                      # chunks file
+├── env                          # Environment variables
 ├── .gitignore                    # Git ignore settings
-└── README.md                     # Project documentation
-|_  requirement.txt               # dependencies
+├── README.md                     # Project documentation
+└── requirements.txt              # List of dependencies
+
 
 ## Usage
 
@@ -159,7 +162,14 @@ This launches the UI where users can enter queries and receive responses.
 
 User queries and responses are saved in `logger/logs.csv`. You can view them directly in the UI.
 
-📊 Evaluation Results: 76.16707616707616% Accuracy | Passed: 310 | Failed: 97 
+## Evaluation Results
+## Final Evaluation Summary
+## Total Score: 0.5694449
+## Average Final Query-Wise Score: 0.52
+## Average Answer Correctness Score (Considered Final in Some Cases): 0.62
+
+
+ 
 
 
 
