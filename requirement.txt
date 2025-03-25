@@ -9,3 +9,6 @@ sentence-transformers
 fuzzywuzzy
 python-Levenshtein
 streamlit
+openpyxl 
+bert-score
+pytest
