@@ -164,9 +164,9 @@ User queries and responses are saved in `logger/logs.csv`. You can view them dir
 
 ## Evaluation Results
 - **Final Evaluation Summary**
-   - **Total Score: 0.57**
+   - **Total Score: 0.56**
    - **Average Final Query-Wise Score: 0.52**
-   - **Average Answer Correctness Score (Considered Final in Some Cases): 0.62**
+   - **Average Answer Correctness Score (Considered Final in Some Cases): 0.59**
 
 ## Contributing
 
