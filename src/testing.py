@@ -136,7 +136,7 @@ class BertProcessor:
 if __name__ == "__main__":
     # Paths and API configurations
     INPUT_FILE = "data/q&a_rag_application.xlsx"
-    OUTPUT_FILE = "src/test_results/bert_base_scores1.xlsx"
+    OUTPUT_FILE = "src/test_results/bert_base_scores_.xlsx"
 
     # Initialize and run the BertProcessor
     processor = BertProcessor(INPUT_FILE, OUTPUT_FILE)
