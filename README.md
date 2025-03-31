@@ -107,38 +107,38 @@ streamlit run src/app.py
 ## File Structure
 
 ```
-CrewAI-RAG-QA-System/
-├── venv/                      # Virtual environment
-├── src/                       # Source code
-│   ├── data_processing/        # Web scraping, chunking, and embeddings
-│   │   ├── chunking.py           # Text chunking logic
-│   │   ├── embedding.py          # Generate embeddings
-│   │   ├── scrape_website.py     # Web scraping logic
-│   ├── pinecone_ops/           # Pinecone setup and upload
-│   │   ├── pinecone_setup.py     # Pinecone setup
-│   │   ├── config.py             # Configuration settings
-│   │   ├── upload.py             # Upload to Pinecone/Storage
-│   ├── tests/                  # Test-related files
-│   │   ├── test_rag.py         # pytest of code base
-│   ├── logger/                 # Logging functionality
-│   │   ├──log.py                # Logging utilities
-│   │   ├──logs.csv              # Log storage
-│   ├── llm_ops/                # LLM and Pinecone queries
-│   │   ├──llm2.py               # LLM pipeline logic
-│   │   ├──query_to_pinecone.py   # Querying Pinecone
-│   ├── app.py                    # Main application entry point
-│   ├──main_final.py             # Main execution file
-|   ├──testing.py                        #testing test cases in input file q&a_rag_application.xlsx   
-|   ├──test_results/                     #contains output .xlxs file of rag evaluation model 
-|   |   ├──bert_base_scores_.xlsx        #contains results of test cases query wise, and final score of test cases 
-├── data/                              # Data storage
-│    ├──output.json                     # Processed output data
-|    ├──q&a_rag_application.xlsx        #input .xlxs file contains test cases 
-|    ├──chunks.json                      # chunks file
-├── env                          # Environment variables
-├── .gitignore                    # Git ignore settings
-├── README.md                     # Project documentation
-└── requirements.txt              # List of dependencies
+📂 CrewAI-RAG-QA-System/
+├── 📚 venv/                           # Virtual environment (isolated Python packages)
+├── 📂 src/                            # Source code
+│   ├── 📂 data_processing/            # Data preparation and preprocessing
+│   │   ├── 📄 chunking.py               # Text chunking logic for splitting data
+│   │   ├── 📄 embedding.py              # Generate embeddings using Hugging Face models
+│   │   ├── 📄 scrape_website.py         # Web scraping logic with BeautifulSoup/Selenium
+│   ├── 📂 pinecone_ops/               # Pinecone-related operations
+│   │   ├── 📄 pinecone_setup.py         # Pinecone initialization and setup
+│   │   ├── 📄 config.py                 # Configuration for Pinecone and storage
+│   │   ├── 📄 upload.py                 # Upload data to Pinecone/Cloud Storage
+│   ├── 📂 tests/                      # Unit and integration tests
+│   │   ├── 📄 test_rag.py               # Pytest test cases for the application
+│   ├── 📂 logger/                     # Logging and monitoring
+│   │   ├── 📄 log.py                    # Logging utilities and handlers
+│   │   ├── 📄 logs.csv                  # Log storage for audit trails
+│   ├── 📂 llm_ops/                    # LLM interaction and query logic
+│   │   ├── 📄 llm2.py                   # LLM pipeline with RAG logic
+│   │   ├── 📄 query_to_pinecone.py      # Querying Pinecone and retrieving context
+│   ├── 📄 app.py                      # Main Streamlit/Flask entry point
+│   ├── 📄 main_final.py               # Main script for execution and deployment
+│   ├── 📄 testing.py                  # Test script for evaluating model on input file
+│   ├── 📂 test_results/               # Test evaluation results
+│   │   ├── 📄 bert_base_scores_.xlsx   # Query-wise and final RAG evaluation scores
+├── 📂 data/                           # Data storage and input/output files
+│   ├── 📄 output.json                  # Processed JSON output with extracted data
+│   ├── 📄 q&a_rag_application.xlsx     # Input XLSX file with test cases
+│   ├── 📄 chunks.json                  # Chunked data ready for embedding
+├── 📂 env/                           # Environment variables for secure configuration
+├── 📄 .gitignore                     # Git settings to ignore unnecessary files
+├── 📄 README.md                      # Project documentation and usage guide
+└── 📄 requirements.txt               # List of required dependencies
 
 
 ## Usage
