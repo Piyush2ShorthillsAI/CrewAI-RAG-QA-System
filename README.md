@@ -6,7 +6,7 @@ This project implements a **Retrieval-Augmented Generation (RAG)** system using 
 
 - **Web-based Q&A system** using Streamlit
 - **Retrieval-Augmented Generation (RAG)** using Pinecone
-- **llamma** for text generation
+- **llama** for text generation
 - **Efficient CPU-based inference**
 - **Logging** of user interactions
 
